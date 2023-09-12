@@ -10,6 +10,7 @@ body {
         content: '';
         display: block;
         position: absolute;
+        z-index: -1;
         top: -120px;
         left: calc(50% - 360px);
         width: 720px;
@@ -22,6 +23,15 @@ hr {
     margin: 1em 0;
     border: 0;
     border-bottom: 1px solid color(gray, 900);
+}
+
+ol, ul {
+    padding-left: 2em;
+    margin-bottom: 1em;
+}
+
+li {
+    margin-bottom: .5em;
 }
 
 nav {
@@ -76,7 +86,7 @@ nav {
 }
 
 .version_wrapper {
-    flex-basis: 240px;
+    flex-basis: 260px;
     flex-grow: 0;
     flex-shrink: 0;
     margin: 3em 0 0 0;
@@ -99,7 +109,7 @@ nav {
 }
 
 .version_number {
-    font-family: 'DM Mono', monospace;
+    font-family: $codeFont;
     line-height: 1;
     float: left;
     margin-bottom: 8px;
@@ -112,7 +122,8 @@ nav {
 .pub_date {
     clear: both;
     color: color(gray, 200);
-    font-size: $font-size-small;
+    font-family: $codeFont;
+    font-size: $fontSizeSmall;
 }
 
 .content {
@@ -121,6 +132,20 @@ nav {
         height: auto;
         border-radius: 12px;
         border: 1px solid color(gray, 800);
+    }
+}
+
+footer {
+    display: flex;
+    padding: 2em 0;
+    color: color(gray, 500);
+    justify-content: space-between;
+    border-top: 1px solid color(gray, 900);
+
+    a {
+        margin-left: 1em;
+        color: color(gray, 500);
+        text-decoration: none;
     }
 }
 

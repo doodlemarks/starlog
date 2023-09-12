@@ -1,29 +1,22 @@
 ---
-layout: ../../layouts/Layout.astro
-title: 'My First Blog Post'
-pubDate: '2022 - 07 - 01'
-versionNumber: '2.8'
+layout: ../../layouts/PostLayout.astro
+title: 'Introducing Nebulous 2.0!'
+pubDate: '2022-07-01'
+versionNumber: '2.0'
 description: 'This is the first post of my new Astro blog.'
-author: 'Astro Learner'
 image:
     url: 'https://docs.astro.build/assets/full-logo-light.png'
     alt: 'The full Astro logo.'
-tags: ["astro", "blogging", "learning in public"]
 ---
-## My First Blog Post
+## Introducing Nebulous 2.0!
 
-![A starry night sky.](../../assets/strudel-wallpaper.png)
+![A starry night sky.](../../assets/starlog-placeholder-2.jpg)
 
-Welcome to my _new blog_ about learning Astro! Here, I will share my learning journey as I build a new website.
+Astro 3.0 is the first major web framework to support the View Transitions API. Fade, slide, morph, and even persist stateful elements across page navigation with ease. Until recently this had only been possible inside of JavaScript Single Page Applications (SPAs). But thanks to advances in the web platform, these features are now available for everyone in Astro 3.0.
 
-### What I've accomplished
-
-1. **Installing Astro**: First, I created a new Astro project and set up my online accounts.
-
-2. **Making Pages**: I then learned how to make pages by creating new `.astro` files and placing them in the `src/pages/` folder.
-
-3. **Making Blog Posts**: This is my first blog post! I now have Astro pages and Markdown posts!
-
-### What's next
-
-I will finish the Astro tutorial, and then keep adding more posts. Watch this space for more to come.
+### 🍿 New:
+* Image Optimization (stable): Unflagged and better than ever.
+* Faster Rendering Performance: Astro components render 30-75% faster.
+* SSR Enhancements for Serverless: New ways to connect to your hosting platform.
+* HMR Enhancements for JSX: Fast Refresh support for React and Preact.
+* Optimized Build Output: Cleaner and more performant HTML.

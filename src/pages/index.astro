@@ -1,12 +1,12 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from '../layouts/IndexLayout.astro';
 import Header from '../components/Header.astro';
 const posts = await Astro.glob('../pages/posts/*.md');
 
 ---
-<Header />
+<Layout>
 	<main>
-		<h1 class="page_title">Changelog</h1>
+		<h1 class="page_title" transition:animate="initial">Changelog</h1>
 		<hr />
 		<ul class="posts">
 			{posts.map(post => 
@@ -24,6 +24,6 @@ const posts = await Astro.glob('../pages/posts/*.md');
 					</div>
 				</li>
 			)}
-
 		</ul>
 	</main>
+</Layout>
