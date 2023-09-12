@@ -10,7 +10,7 @@ body {
         content: '';
         display: block;
         position: absolute;
-        top: -100px;
+        top: -120px;
         left: calc(50% - 360px);
         width: 720px;
         height: 240px;
@@ -21,7 +21,7 @@ body {
 hr {
     margin: 1em 0;
     border: 0;
-    border-bottom: 1px solid color(gray, 800);
+    border-bottom: 1px solid color(gray, 900);
 }
 
 nav {
@@ -68,58 +68,59 @@ nav {
 .posts {
     list-style: none;
     padding: 0;
+}
 
-    >li {
-        display: flex;
-        margin-bottom: 3em;
+.post {
+    display: flex;
+    margin-bottom: 3em;
+}
+
+.version_wrapper {
+    flex-basis: 240px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    margin: 3em 0 0 0;
+
+    .version_info {
+        position: sticky;
+        top: 1em;    
     }
 
-    .version_wrapper {
-        flex-basis: 240px;
-        flex-grow: 0;
-        flex-shrink: 0;
-        margin: 3em 0 0 0;
-
-        .version_info {
-            position: sticky;
-            top: 1em;    
-        }
-
-        a {
-            float: left;
-            color: #fff;
-            text-decoration: none;
-            transition: 0.1s ease;
-
-            &:hover {
-                opacity: 0.6;
-            }    
-        }
-    }
-
-    .version_number {
-        font-family: monospace;
-        line-height: 1;
+    a {
         float: left;
-        margin-bottom: 8px;
-        padding: 4px 8px;
-        border: 1px solid color(accent,700);
-        border-radius: 8px;
-        background-color: color(accent, 800);
-    }
+        color: #fff;
+        text-decoration: none;
+        transition: 0.1s ease;
 
-    .pub_date {
-        clear: both;
-        color: color(gray, 200);
-        font-size: $font-size-small;
-    }
-
-    .content {
-        img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 12px;
-            border: 1px solid color(gray, 800);
-        }
+        &:hover {
+            opacity: 0.6;
+        }    
     }
 }
+
+.version_number {
+    font-family: 'DM Mono', monospace;
+    line-height: 1;
+    float: left;
+    margin-bottom: 8px;
+    padding: 4px 12px;
+    border: 1px solid color(accent, 600);
+    border-radius: 8px;
+    background-color: color(accent, 800);
+}
+
+.pub_date {
+    clear: both;
+    color: color(gray, 200);
+    font-size: $font-size-small;
+}
+
+.content {
+    img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 12px;
+        border: 1px solid color(gray, 800);
+    }
+}
+

@@ -4,6 +4,9 @@ import { SiteTitle } from '../consts';
 import HeaderLink from './HeaderLink.astro';
 
 ---
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono&family=Lato:wght@400;700&display=swap" rel="stylesheet">	</head>
 
 <header>
     <nav>
@@ -19,23 +22,4 @@ import HeaderLink from './HeaderLink.astro';
     </nav>
 </header>
 <style>
-    nav {
-        margin: 0 0 2em 0;
-        padding: 2em 0;
-    }
-    #site_title {
-        margin: 0;
-    }
-    #site_title a {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        color: #fff;
-        font-size: 16px;
-        font-weight: 700;
-        letter-spacing: 2px;
-        line-height: 1;
-        text-decoration: none;
-        text-transform: uppercase;
-    }
 </style>
