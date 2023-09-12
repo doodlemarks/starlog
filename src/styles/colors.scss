@@ -19,8 +19,10 @@
     @return null;
    
 }
+
+$white: #ffffff;
 $palette: (
-    accent: (  
+    purple: (  
         50: #F2E8FD,
         100: #E6D1FA,
         200: #CFA3F5,
@@ -33,6 +35,19 @@ $palette: (
         900: #15031C,
         950: #020002
     ),
+    orange: (
+        50: #FBF0EA,
+        100: #F8E3D9,
+        200: #F2CAB7,
+        300: #ECB194,
+        400: #E59872,
+        500: #DF7F4F,
+        600: #D05F26,
+        700: #A1491D,
+        800: #713315,
+        900: #421E0C,
+        950: #2A1308
+        ),
     gray: (  
         50: #F6F6F9,
         100: #E6E7EF,

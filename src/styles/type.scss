@@ -1,11 +1,14 @@
 $baseFont:  'Lato', sans-serif;
 $codeFont: 'Source Code Pro', monospace;
+$fontSizeSmall: 15px;
 
-html {
+body {
     font-family: $baseFont;
-    font-size: 20px;
+    font-size: 18px;
+    line-height: 1.65;
     font-weight: 400;
-    color: color(gray, 200);
+    @media (prefers-color-scheme: dark) { color: color(gray, 200); }
+    color: color(gray, 800);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
@@ -13,36 +16,29 @@ html {
 
 h1, h2, h3, h4, h5 {
     line-height: 1;
-    margin: 2rem 0 1rem 0;
-    color: #fff;
+    margin: 1.5em 0 1em 0;
+    @media (prefers-color-scheme: dark) { color: $white; }
+    color: color( gray, 950);
     font-weight: 700;
 }
-h1 {
-    font-size: 61px;
-}
-h2 {
-    font-size: 49px;
-}
-h3 {
-    font-size: 39px;
-}
-h4 {
-    font-size: 25px;
-}
-h5 {
-    font-size: 20px;
-}
-
-body {
-    line-height: 1.5;
-}
-
-$fontSizeSmall: 16px;
+  
+h1 { font-size: 3.052em;}
+h2 {font-size: 2.441em;}
+h3 {font-size: 1.953em;}
+h4 {font-size: 1.563em;}
+h5 {font-size: 1.25em;}
 
 p {
-    margin: 0 0 1rem 0;
+    margin: 0 0 1em 0;
 }
 
 code {
     font-family: $codeFont;
+}
+
+b, strong {
+    font-weight: 700;
+    color: #fff;
+    @media (prefers-color-scheme: dark) { color: $white; }
+    color: color( gray, 950);
 }

@@ -15,12 +15,13 @@ const {frontmatter} = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 		<title>{SiteTitle}</title>
 	<body>
+		<div class="glow"></div>
 		<Header />
 		<div class="post">
 			<div class="version_wrapper">
 				<div class="version_info">
 					<div class="version_number">{frontmatter.versionNumber}</div>
-					<div class="pub_date">{frontmatter.pubDate}</div>
+					<div class="date">{frontmatter.date}</div>
 				</div>
 			</div>
 			<div class="content">
