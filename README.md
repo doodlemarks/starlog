@@ -1,4 +1,8 @@
 # Starlog
+## Release notes theme for Astro
+![starlog-gh](https://github.com/doodlemarks/starlog/assets/2244813/9c5c2e46-665a-437e-a971-053db4dbff63)
+
+***
 
 Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
 
