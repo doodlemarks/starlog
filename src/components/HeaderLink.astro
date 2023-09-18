@@ -3,20 +3,20 @@ import type { HTMLAttributes } from 'astro/types';
 
 type Props = HTMLAttributes<'a'>;
 
-const { href, class: className, ...props } = Astro.props;
+const { href, ...props } = Astro.props;
 
 const { pathname } = Astro.url;
 const isActive = href === pathname || href === pathname.replace(/\/$/, '');
 ---
 
-<a href={href} class:list={[className, { active: isActive }]} {...props}>
+<a href={href} aria-current={isActive ? "page" : undefined} {...props}>
 	<slot />
 </a>
 <style>
 	a {
 		text-decoration: none;
 	}
-	a.active {
+	a[aria-current="page"] {
 		text-decoration: underline;
 	}
 </style>
