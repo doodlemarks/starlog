@@ -1,25 +1,18 @@
 ---
 import { ViewTransitions } from 'astro:transitions';
-import { SiteTitle, SiteDescription } from '../consts'
+import SEO, { type Props as SEOProps } from './SEO.astro';
+import { SiteTitle, SiteDescription } from '../consts';
 
-export type Props = {
-    title?: string | undefined
-    description?: string | undefined
-}
-
+export type Props = Partial<SEOProps>
 const {
     title = SiteTitle,
-    description = SiteDescription
+    name = SiteTitle,
+    description = SiteDescription,
+    ...seo
 } = Astro.props
 ---
 
-
-<meta charset="UTF-8" />
-<meta name="description" content={description} />
-<meta name="viewport" content="width=device-width" />
-<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-<meta name="generator" content={Astro.generator} />
-<title>{title}</title>
+<SEO {title} {description} {name} {...seo} />
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

@@ -15,7 +15,7 @@ const { release } = Astro.props;
 <!doctype html>
 <html lang="en">
 	<head>
-        <BaseHead title={release.data.title} description={release.data.description} />
+        <BaseHead title={release.data.title} description={release.data.description} image={release.data.image} />
 	<body>
 		<div class="glow"></div>
 		<Header />
