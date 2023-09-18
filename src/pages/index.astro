@@ -1,8 +1,10 @@
 ---
+import { getCollection } from 'astro:content';
+import FormattedDate from '../components/FormattedDate.astro';
 import Layout from '../layouts/IndexLayout.astro';
-import Header from '../components/Header.astro';
-const posts = await Astro.glob('../pages/posts/*.md');
-posts.sort((a, b) => Date.parse(b.frontmatter.date) - Date.parse(a.frontmatter.date));
+
+const posts = await getCollection('releases');
+posts.sort((a, b) => b.data.date - a.data.date);
 ---
 <Layout>
 	<main>
@@ -13,14 +15,16 @@ posts.sort((a, b) => Date.parse(b.frontmatter.date) - Date.parse(a.frontmatter.d
 				<li class="post">
 					<div class="version_wrapper">
 						<div class="version_info">
-							<a href={post.url}>
-								<div class="version_number">{post.frontmatter.versionNumber}</div>
-								<div class="date">{post.frontmatter.date}</div>
+							<a href={`/releases/${post.slug}`}>
+								<div class="version_number">{post.data.versionNumber}</div>
+                                <FormattedDate class="date" date={post.data.date} />
 							</a>
 							</div>
 						</div>
 					<div class="content">
-						<Fragment set:html={post.compiledContent()}/>
+						{
+                            post.render().then(({ Content }) => (<Content />))
+                        }
 					</div>
 				</li>
 			)}

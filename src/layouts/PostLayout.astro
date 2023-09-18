@@ -1,23 +1,29 @@
 ---
+import type { CollectionEntry } from 'astro:content';
 import BaseHead from "../components/BaseHead.astro";
+import FormattedDate from '../components/FormattedDate.astro';
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 
-const {frontmatter} = Astro.props;
+type Props = {
+    release: CollectionEntry<'releases'>
+}
+
+const { release } = Astro.props;
 ---
 
 <!doctype html>
 <html lang="en">
 	<head>
-        <BaseHead title={frontmatter.title} description={frontmatter.description} />
+        <BaseHead title={release.data.title} description={release.data.description} />
 	<body>
 		<div class="glow"></div>
 		<Header />
 		<div class="post single" transition:persist transition:name="post">
 			<div class="version_wrapper">
 				<div class="version_info">
-					<div class="version_number">{frontmatter.versionNumber}</div>
-					<div class="date">{frontmatter.date}</div>
+					<div class="version_number">{release.data.versionNumber}</div>
+					<FormattedDate class="date" date={release.data.date} />
 				</div>
 			</div>
 			<div class="content">
